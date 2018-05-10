@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "165127245672",
+    "firebase_url": "https://radio-zonica.firebaseio.com",
+    "project_id": "radio-zonica",
+    "storage_bucket": "radio-zonica.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165127245672:android:0a75d5bb30acad56",
+        "android_client_info": {
+          "package_name": "com.GrupoZonica.RZonica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165127245672-2vt41e8tvd38fnkpga19k3bcks5obvuj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.GrupoZonica.RZonica",
+            "certificate_hash": "d62d4d002999f93b84f71e5c3151413eb9192e78"
+          }
+        },
+        {
+          "client_id": "165127245672-89o47d8tk6qqaokl6hj450lnu3aab71l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjTKhUohVo9GzCZxt4iPsqF01QYd7-m2k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165127245672-89o47d8tk6qqaokl6hj450lnu3aab71l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "165127245672-62ru4co5i304j0njqu6q2cot0foajs63.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.GrupoZonica.RadioZonica",
+                "app_store_id": "1307870576"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

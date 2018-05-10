@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionName="1.12" package="com.GrupoZonica.RZonica" android:versionCode="23">
-	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionName="1.13" package="com.GrupoZonica.RZonica" android:versionCode="24">
+	<uses-sdk android:minSdkVersion="15" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<application android:label="Radio Zonica" android:icon="@drawable/icon"></application>
 </manifest>
