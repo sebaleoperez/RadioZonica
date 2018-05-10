@@ -1,6 +1,7 @@
 ﻿using Foundation;
 using ObjCRuntime;
 using UIKit;
+using Firebase.Analytics;
 
 namespace RadioZonica.iOS
 {
@@ -11,8 +12,12 @@ namespace RadioZonica.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
-            LoadApplication(new App());
 
+			Firebase.Core.App.Configure();
+			Analytics.LogEvent(EventNamesConstants.AppOpen, null);
+
+            LoadApplication(new App());         
+         
             return base.FinishedLaunching(app, options);
         }
 
