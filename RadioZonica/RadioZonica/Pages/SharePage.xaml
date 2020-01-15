@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="RadioZonica.Pages.SharePage"
              Title="Compartir">
     <Grid>
@@ -27,12 +28,12 @@
 
             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontAttributes="Bold" FontSize="Large" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Text="Compartí en las redes!" />
 
-            <Image Grid.Row="1" Grid.Column="0" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="facebook.png" />
-            <Image Grid.Row="1" Grid.Column="1" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="twitter.png" />
-            <Image Grid.Row="1" Grid.Column="2" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="whatsapp.png" />
-            <Image Grid.Row="2" Grid.Column="0" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="message.png" />
-            <Image Grid.Row="2" Grid.Column="1" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="mail.png" />
-            <Image Grid.Row="2" Grid.Column="2" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="tumblr.png" />
+            <ffimageloading:CachedImage Grid.Row="1" Grid.Column="0" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="facebook.png" />
+            <ffimageloading:CachedImage Grid.Row="1" Grid.Column="1" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="twitter.png" />
+            <ffimageloading:CachedImage Grid.Row="1" Grid.Column="2" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="whatsapp.png" />
+            <ffimageloading:CachedImage Grid.Row="2" Grid.Column="0" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="message.png" />
+            <ffimageloading:CachedImage Grid.Row="2" Grid.Column="1" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="mail.png" />
+            <ffimageloading:CachedImage Grid.Row="2" Grid.Column="2" Margin="10" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="128" Source="tumblr.png" />
 
             <Grid.GestureRecognizers>
                 <TapGestureRecognizer Tapped="Share_Tapped" />
@@ -50,7 +51,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Image Grid.Row="0" Grid.Column="0"  Aspect="AspectFit" Margin="20" HorizontalOptions="Center" VerticalOptions="Center" Source="whatsapp.png" HeightRequest="64" />
+            <ffimageloading:CachedImage Grid.Row="0" Grid.Column="0"  Aspect="AspectFit" Margin="20" HorizontalOptions="Center" VerticalOptions="Center" Source="whatsapp.png" HeightRequest="64" />
             <Label x:Name="lblWP" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" FontSize="Large" TextColor="Black" VerticalOptions="Center" />
 
             <Grid.GestureRecognizers>

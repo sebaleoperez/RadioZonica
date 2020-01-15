@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System.Net.Http;
+using System.Net;
 
 namespace RadioZonica.Helpers
 {
@@ -31,7 +32,7 @@ namespace RadioZonica.Helpers
                 name = await response.Content.ReadAsStringAsync();
             }
 
-            return name.Trim();
+            return WebUtility.HtmlDecode(name.Trim());
         }
     }
 }

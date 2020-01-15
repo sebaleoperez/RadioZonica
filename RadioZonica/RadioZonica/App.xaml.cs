@@ -1,5 +1,8 @@
 ﻿using RadioZonica.Pages;
 using Xamarin.Forms;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace RadioZonica
 {
@@ -17,7 +20,10 @@ namespace RadioZonica
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            AppCenter.Start("android=086afe69-1e12-41c1-a098-853c09741168;" +
+                  "uwp={Your UWP App secret here};" +
+                  "ios=19cb361f-31c2-41fb-b81b-844338c7533f;",
+                  typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()

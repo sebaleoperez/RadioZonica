@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="RadioZonica.Pages.RadioPage"
              Title="Radio Zonica">
     <Grid RowSpacing="0">
@@ -15,7 +16,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Image Grid.Column="0" Grid.Row="0" Margin="20" Source="logo.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" />
+        <ffimageloading:CachedImage Grid.Column="0" Grid.Row="0" Margin="20" Source="logo.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" />
 
         <Grid Grid.Column="0" Grid.Row="1" Margin="0,20,0,20">
             <Grid.RowDefinitions>
@@ -25,11 +26,11 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Image Grid.Column="0" Grid.Row="0" Margin="10" Source="play.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" IsVisible="{Binding PlayDisplayed}">
-                <Image.GestureRecognizers>
+            <ffimageloading:CachedImage Grid.Column="0" Grid.Row="0" Margin="10" Source="play.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand" IsVisible="{Binding PlayDisplayed}">
+                <ffimageloading:CachedImage.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Play_Tapped" />
-                </Image.GestureRecognizers>
-            </Image>
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
 
             <Grid Grid.Column="0" Grid.Row="0" IsVisible="{Binding StopDisplayed}">
                 <Grid.ColumnDefinitions>
@@ -40,23 +41,23 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Image Grid.Row="0" Grid.Column="0" Margin="10" Source="stop.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand">
-                    <Image.GestureRecognizers>
+                <ffimageloading:CachedImage Grid.Row="0" Grid.Column="0" Margin="10" Source="stop.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand">
+                    <ffimageloading:CachedImage.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Stop_Tapped" />
-                    </Image.GestureRecognizers>
-                </Image>
-                <Image Grid.Row="0" Grid.Column="1" Margin="10" Source="pause.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand">
-                    <Image.GestureRecognizers>
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+                <ffimageloading:CachedImage Grid.Row="0" Grid.Column="1" Margin="10" Source="pause.png" Aspect="AspectFit" HorizontalOptions="CenterAndExpand">
+                    <ffimageloading:CachedImage.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Pause_Tapped" />
-                    </Image.GestureRecognizers>
-                </Image>
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
             </Grid>
 
             <ActivityIndicator IsRunning="True" Color="Black" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" IsVisible="{Binding RadioIsLoading}" />
         </Grid>
 
         <Label Grid.Column="0" Grid.Row="2" Margin="10,0,10,0" Text="{Binding ProgramName}" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
-        <Image Grid.Column="0" Grid.Row="3" Margin="0" Aspect="AspectFit" Source="{Binding ProgramUrl}" HorizontalOptions="FillAndExpand" />
+        <ffimageloading:CachedImage Grid.Column="0" Grid.Row="3" Margin="0" Aspect="AspectFit" Source="{Binding ProgramUrl}" HorizontalOptions="FillAndExpand" />
 
         <Grid Grid.Column="0" Grid.Row="4" Margin="10">
             <Grid.ColumnDefinitions>
@@ -70,35 +71,35 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Image Grid.Column="0" Grid.Row="0" Source="facebook.png" HorizontalOptions="Center" HeightRequest="32">
-                <Image.GestureRecognizers>
+            <ffimageloading:CachedImage Grid.Column="0" Grid.Row="0" Source="facebook.png" HorizontalOptions="Center" HeightRequest="32">
+                <ffimageloading:CachedImage.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Facebook_Tapped" />
-                </Image.GestureRecognizers>
-            </Image>
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
 
-            <Image Grid.Column="1" Grid.Row="0" Source="twitter.png" HorizontalOptions="Center" HeightRequest="32">
-                <Image.GestureRecognizers>
+            <ffimageloading:CachedImage Grid.Column="1" Grid.Row="0" Source="twitter.png" HorizontalOptions="Center" HeightRequest="32">
+                <ffimageloading:CachedImage.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Twitter_Tapped" />
-                </Image.GestureRecognizers>
-            </Image>
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
 
-            <Image Grid.Column="2" Grid.Row="0" Source="instagram.png" HorizontalOptions="Center" HeightRequest="32">
-                <Image.GestureRecognizers>
+            <ffimageloading:CachedImage Grid.Column="2" Grid.Row="0" Source="instagram.png" HorizontalOptions="Center" HeightRequest="32">
+                <ffimageloading:CachedImage.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Instagram_Tapped" />
-                </Image.GestureRecognizers>
-            </Image>
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
 
-            <Image Grid.Column="3" Grid.Row="0" Source="youtube.png" HorizontalOptions="Center" HeightRequest="32">
-                <Image.GestureRecognizers>
+            <ffimageloading:CachedImage Grid.Column="3" Grid.Row="0" Source="youtube.png" HorizontalOptions="Center" HeightRequest="32">
+                <ffimageloading:CachedImage.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Youtube_Tapped" />
-                </Image.GestureRecognizers>
-            </Image>
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
 
-            <Image Grid.Column="4" Grid.Row="0" Source="soundcloud.png" HorizontalOptions="Center" HeightRequest="32">
-                <Image.GestureRecognizers>
+            <ffimageloading:CachedImage Grid.Column="4" Grid.Row="0" Source="soundcloud.png" HorizontalOptions="Center" HeightRequest="32">
+                <ffimageloading:CachedImage.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Soundcloud_Tapped" />
-                </Image.GestureRecognizers>
-            </Image>
+                </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
         </Grid>
     </Grid>
 </ContentPage>
